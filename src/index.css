@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Alfa Slab One", serif;
+  --font-sans: "Work Sans", sans-serif;
+  --font-mono: "Courier Prime", monospace;
+}
+
+:root {
+  /* Cores */
+  --tema-color-bg: #0F1E24;
+  --tema-color-surface: #16303A;
+  --tema-color-border: #2B4852;
+  --tema-color-text: #F2EEE3;
+  --tema-color-text-muted: #A9B8BA;
+  --tema-color-accent: #F26B3A;
+  --tema-color-accent-ink: #FF8A5C;
+  --tema-color-on-accent: #0F1E24;
+  --tema-color-deco-1: #F2EEE3;
+  --tema-color-deco-2: #F26B3A;
+  --tema-color-deco-3: #3FA7A0;
+
+  /* Fontes */
+  --tema-font-display: 'Alfa Slab One', serif;
+  --tema-font-body: 'Work Sans', sans-serif;
+  --tema-font-label: 'Work Sans', sans-serif;
+  --tema-font-mono: 'Courier Prime', monospace;
+
+  /* Forma */
+  --tema-radius: 6px;
+  --tema-radius-lg: 12px;
+  --tema-border-width: 2px;
+  --tema-shadow-hard: none;
+
+  /* Texto */
+  --tema-label-transform: uppercase;
+  --tema-label-tracking: 0.12em;
+  --tema-display-transform: uppercase;
+
+  /* Movimento */
+  --motion-duration-fast: 150ms;
+  --motion-duration-base: 300ms;
+  --motion-duration-slow: 700ms;
+  --motion-duration-cinematic: 1000ms;
+  --motion-easing-base: cubic-bezier(0.4, 0, 0.2, 1);
+  --motion-easing-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
+  --motion-stagger: 80ms;
+}
+
+/* Base resets & typography */
+html {
+  background-color: var(--tema-color-bg);
+  color: var(--tema-color-text);
+  font-family: var(--tema-font-body);
+  font-size: 16px;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: var(--tema-color-bg);
+  color: var(--tema-color-text);
+  overflow-x: hidden;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--tema-color-accent-ink);
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar matching palette */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--tema-color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--tema-color-border);
+  border-radius: var(--tema-radius);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--tema-color-accent);
+}
